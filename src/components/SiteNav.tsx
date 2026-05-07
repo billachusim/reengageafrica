@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { VOICES_URL } from "@/config/links";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/reengage-logo.png";
 
 const links = [
   { href: "#voices", label: "Voices" },
@@ -32,15 +33,14 @@ export const SiteNav = () => {
       )}
     >
       <nav className="container flex h-16 items-center justify-between md:h-20">
-        <a href="#top" className="flex items-center gap-2 group">
-          <span
-            className={cn(
-              "h-9 w-9 rounded-full bg-gradient-warm shadow-warm transition-transform group-hover:scale-110",
-              "flex items-center justify-center text-primary-foreground font-serif font-bold"
-            )}
-          >
-            R
-          </span>
+        <a href="#top" className="flex items-center gap-2.5 group">
+          <img
+            src={logo}
+            alt="ReEngage Africa"
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-full object-contain transition-transform group-hover:scale-105"
+          />
           <span
             className={cn(
               "font-serif text-lg font-semibold tracking-tight",
