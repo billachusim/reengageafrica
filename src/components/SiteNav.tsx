@@ -47,7 +47,7 @@ export const SiteNav = () => {
               scrolled ? "text-foreground" : "text-night-foreground"
             )}
           >
-            ReEngage <span className="text-primary">Africa</span>
+            ReEngage <span className="text-white">Africa</span>
           </span>
         </a>
 
