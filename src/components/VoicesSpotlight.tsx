@@ -6,31 +6,32 @@ import { VOICES_URL } from "@/config/links";
 
 export const VoicesSpotlight = () => {
   return (
-    <section id="voices" className="relative bg-background py-20 md:py-32">
+    <section id="voices" className="relative bg-background py-16 md:py-24">
       <div className="container">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1 text-xs uppercase tracking-[0.18em] text-secondary-foreground">
+        <div className="relative mx-auto max-w-3xl text-center">
+          <span aria-hidden className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 font-serif text-[140px] leading-none text-primary/5 select-none">“</span>
+          <span className="relative inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1 text-xs uppercase tracking-[0.18em] text-secondary-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
             ReEngage African Voices
           </span>
-          <h2 className="mt-6 font-serif text-4xl leading-tight md:text-6xl text-balance">
+          <h2 className="relative mt-5 font-serif text-4xl leading-tight md:text-6xl text-balance">
             Forgotten stories. <em className="not-italic text-primary">Remembered voices.</em>
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground text-balance">
+          <p className="relative mt-5 text-lg leading-relaxed text-muted-foreground text-balance">
             African Voices is a living audio archive of folklore, songs, and lived wisdom — narrated
             by elders, preserved for their grandchildren, and shared with the world. Press play and
             let an elder take you home.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-5 md:grid-cols-2">
           <StoryCard story={stories[0]} featured />
           {stories.slice(1).map((s) => (
             <StoryCard key={s.id} story={s} />
           ))}
         </div>
 
-        <div className="mt-16 overflow-hidden rounded-3xl bg-gradient-warm p-10 text-center text-primary-foreground shadow-warm md:p-14 grain">
+        <div className="mt-12 overflow-hidden rounded-3xl bg-gradient-warm p-10 text-center text-primary-foreground shadow-warm md:p-12 grain">
           <h3 className="font-serif text-3xl md:text-5xl text-balance">
             Step into the full archive
           </h3>
