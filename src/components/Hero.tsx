@@ -60,7 +60,7 @@ export const Hero = () => {
         </div>
 
         {/* Floating audio teaser card */}
-        <div className="mt-12 max-w-md animate-float md:absolute md:bottom-16 md:right-8 md:mt-0 lg:right-16">
+        <div className="mt-10 max-w-md animate-float md:absolute md:bottom-20 md:right-6 md:mt-0 lg:right-16">
           <div className="rounded-2xl border border-night-foreground/15 bg-night/55 p-4 backdrop-blur-xl shadow-soft">
             <div className="flex items-center gap-3">
               <button

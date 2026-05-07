@@ -23,7 +23,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="bg-background py-20 md:py-28">
+    <section id="contact" className="bg-background py-16 md:py-24">
       <div className="container grid gap-12 md:grid-cols-2 md:items-center">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-primary">Get in touch</p>
@@ -39,7 +39,7 @@ export const ContactSection = () => {
               <span className="grid h-10 w-10 place-items-center rounded-full bg-secondary text-primary">
                 <Mail className="h-4 w-4" />
               </span>
-              hello@reengageafrica.org
+              <a href="mailto:hello@reengageafrica.com" className="hover:text-primary">hello@reengageafrica.com</a>
             </li>
             <li className="flex items-center gap-3">
               <span className="grid h-10 w-10 place-items-center rounded-full bg-secondary text-primary">

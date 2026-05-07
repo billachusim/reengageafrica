@@ -19,7 +19,7 @@ const steps = [
 ];
 
 export const HowItWorks = () => (
-  <section className="relative bg-secondary/40 py-20 md:py-28">
+  <section className="relative bg-secondary/40 py-16 md:py-24">
     <div className="container">
       <div className="mx-auto max-w-2xl text-center">
         <p className="text-xs uppercase tracking-[0.2em] text-primary">How African Voices works</p>
@@ -28,7 +28,7 @@ export const HowItWorks = () => (
         </h2>
       </div>
 
-      <div className="mt-14 grid gap-6 md:grid-cols-3">
+      <div className="mt-12 grid gap-5 md:grid-cols-3">
         {steps.map((s, i) => {
           const Icon = s.icon;
           return (

@@ -1,5 +1,5 @@
 export const AboutBlock = () => (
-  <section id="about" className="relative overflow-hidden bg-night py-20 text-night-foreground md:py-28">
+  <section id="about" className="relative overflow-hidden bg-night py-16 text-night-foreground md:py-24">
     <div className="absolute inset-0 grain pointer-events-none" />
     <div className="container relative grid gap-12 md:grid-cols-12 md:items-center">
       <div className="md:col-span-5">

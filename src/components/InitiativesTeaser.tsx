@@ -20,7 +20,7 @@ const initiatives = [
 ];
 
 export const InitiativesTeaser = () => (
-  <section id="initiatives" className="bg-background py-20 md:py-28">
+  <section id="initiatives" className="bg-background py-16 md:py-24 border-t border-border/60">
     <div className="container">
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div className="max-w-xl">
@@ -35,7 +35,7 @@ export const InitiativesTeaser = () => (
         </p>
       </div>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2">
+      <div className="mt-10 grid gap-5 md:grid-cols-2">
         {initiatives.map((i) => (
           <a
             key={i.tag}

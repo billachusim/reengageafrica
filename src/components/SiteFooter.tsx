@@ -1,12 +1,13 @@
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { VOICES_URL } from "@/config/links";
+import logo from "@/assets/reengage-logo.png";
 
 export const SiteFooter = () => (
   <footer className="bg-night text-night-foreground">
     <div className="container grid gap-10 py-16 md:grid-cols-4">
       <div className="md:col-span-2">
-        <div className="flex items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-gradient-warm font-serif font-bold text-primary-foreground">R</span>
+        <div className="flex items-center gap-2.5">
+          <img src={logo} alt="ReEngage Africa" width={40} height={40} className="h-10 w-10 rounded-full object-contain" />
           <span className="font-serif text-lg font-semibold">
             ReEngage <span className="text-primary">Africa</span>
           </span>
