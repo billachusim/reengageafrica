@@ -17,14 +17,14 @@ export const StoryCard = ({ story, featured = false }: { story: Story; featured?
         featured && "md:flex-row md:col-span-2"
       )}
     >
-      <div className={cn("relative overflow-hidden", featured ? "md:w-1/2" : "aspect-[4/5]")}>
+      <div className={cn("relative overflow-hidden", featured ? "aspect-[3/4] md:aspect-auto md:w-1/2" : "aspect-[3/4]")}>
         <img
           src={story.cover}
           alt={`Portrait of ${story.elder}`}
           loading="lazy"
           width={800}
           height={1024}
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="h-full w-full object-cover object-[50%_25%] transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-night/85 via-night/20 to-transparent" />
         <div className="absolute left-4 top-4 flex flex-wrap gap-2">
