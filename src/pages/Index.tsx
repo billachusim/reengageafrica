@@ -41,6 +41,8 @@ const Index = () => {
         </main>
         <SiteFooter />
         <MiniAudioPlayer />
+        <FloatingWhatsApp />
+        <PreviewLimitDialog />
       </div>
     </AudioProvider>
   );
