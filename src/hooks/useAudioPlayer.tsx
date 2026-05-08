@@ -72,6 +72,7 @@ export const AudioProvider = ({ children }: { children: ReactNode }) => {
       a.currentTime = 0;
       setCurrentTime(0);
     }
+    dismissedRef.current = false;
     setLimitReached(false);
     a.play().then(() => setIsPlaying(true)).catch(() => setIsPlaying(false));
   }, [current]);
