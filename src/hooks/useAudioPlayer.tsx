@@ -106,7 +106,10 @@ export const AudioProvider = ({ children }: { children: ReactNode }) => {
     if (target < PREVIEW_LIMIT_SECONDS) setLimitReached(false);
   }, []);
 
-  const dismissLimit = useCallback(() => setLimitReached(false), []);
+  const dismissLimit = useCallback(() => {
+    dismissedRef.current = true;
+    setLimitReached(false);
+  }, []);
 
   const duration = Math.min(rawDuration || PREVIEW_LIMIT_SECONDS, PREVIEW_LIMIT_SECONDS);
   const progress = duration ? Math.min(currentTime, duration) / duration : 0;
