@@ -1,4 +1,4 @@
-import { Headphones, MessageCircle, Mic, Share2 } from "lucide-react";
+import { Headphones, Mic, Share2 } from "lucide-react";
 
 const steps = [
   {
