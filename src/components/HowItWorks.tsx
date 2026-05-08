@@ -1,10 +1,10 @@
-import { Headphones, Mic, Share2 } from "lucide-react";
+import { Headphones, MessageCircle, Mic, Share2 } from "lucide-react";
 
 const steps = [
   {
     icon: Mic,
     title: "We listen",
-    body: "Our local teams sit with elders in their homes and villages, recording the stories they want to leave behind.",
+    body: "Our local teams sit with elders in their homes and villages, recording the stories they want to leave behind. Elders can also self-record anytime through Agadi, our WhatsApp chatbot.",
   },
   {
     icon: Headphones,
