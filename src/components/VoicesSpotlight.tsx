@@ -24,8 +24,9 @@ export const VoicesSpotlight = () => {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {stories.slice(0, 3).map((s) => (
+        <div className="mt-12 grid gap-5 md:grid-cols-2">
+          <StoryCard story={stories[0]} featured />
+          {stories.slice(1).map((s) => (
             <StoryCard key={s.id} story={s} />
           ))}
         </div>
