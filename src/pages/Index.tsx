@@ -9,6 +9,8 @@ import { AboutBlock } from "@/components/AboutBlock";
 import { ContactSection } from "@/components/ContactSection";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MiniAudioPlayer } from "@/components/MiniAudioPlayer";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { PreviewLimitDialog } from "@/components/PreviewLimitDialog";
 
 const Index = () => {
   useEffect(() => {
@@ -39,6 +41,8 @@ const Index = () => {
         </main>
         <SiteFooter />
         <MiniAudioPlayer />
+        <FloatingWhatsApp />
+        <PreviewLimitDialog />
       </div>
     </AudioProvider>
   );
