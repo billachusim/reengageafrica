@@ -27,6 +27,7 @@ export const AudioProvider = ({ children }: { children: ReactNode }) => {
   const [rawDuration, setRawDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [limitReached, setLimitReached] = useState(false);
+  const dismissedRef = useRef(false);
 
   if (!audioRef.current && typeof window !== "undefined") {
     audioRef.current = new Audio();
@@ -42,7 +43,7 @@ export const AudioProvider = ({ children }: { children: ReactNode }) => {
         a.currentTime = PREVIEW_LIMIT_SECONDS;
         setCurrentTime(PREVIEW_LIMIT_SECONDS);
         setIsPlaying(false);
-        setLimitReached(true);
+        if (!dismissedRef.current) setLimitReached(true);
       } else {
         setCurrentTime(a.currentTime);
       }
