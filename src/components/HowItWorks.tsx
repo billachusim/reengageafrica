@@ -1,10 +1,10 @@
-import { Headphones, Mic, Share2 } from "lucide-react";
+import { Headphones, MessageCircle, Mic, Share2 } from "lucide-react";
 
 const steps = [
   {
     icon: Mic,
     title: "We listen",
-    body: "Our local teams sit with elders in their homes and villages, recording the stories they want to leave behind.",
+    body: "Our local teams sit with elders in their homes and villages, recording the stories they want to leave behind. Elders can also self-record anytime through Agadi, our WhatsApp chatbot.",
   },
   {
     icon: Headphones,
@@ -31,6 +31,7 @@ export const HowItWorks = () => (
       <div className="mt-12 grid gap-5 md:grid-cols-3">
         {steps.map((s, i) => {
           const Icon = s.icon;
+          const isListen = s.title === "We listen";
           return (
             <div
               key={s.title}
@@ -44,6 +45,12 @@ export const HowItWorks = () => (
               </div>
               <h3 className="mt-6 font-serif text-2xl">{s.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
+              {isListen && (
+                <div className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                  <MessageCircle className="h-3.5 w-3.5" />
+                  Agadi on WhatsApp
+                </div>
+              )}
             </div>
           );
         })}
