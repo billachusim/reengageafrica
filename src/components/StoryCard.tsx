@@ -17,7 +17,7 @@ export const StoryCard = ({ story, featured = false }: { story: Story; featured?
         featured && "md:flex-row md:col-span-2"
       )}
     >
-      <div className={cn("relative overflow-hidden", featured ? "md:w-1/2" : "aspect-[4/5]")}>
+      <div className={cn("relative overflow-hidden", featured ? "aspect-[16/10] md:aspect-auto md:w-1/2" : "aspect-[4/3]")}>
         <img
           src={story.cover}
           alt={`Portrait of ${story.elder}`}

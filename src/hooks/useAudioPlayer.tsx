@@ -27,6 +27,7 @@ export const AudioProvider = ({ children }: { children: ReactNode }) => {
   const [rawDuration, setRawDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [limitReached, setLimitReached] = useState(false);
+  const dismissedRef = useRef(false);
 
   if (!audioRef.current && typeof window !== "undefined") {
     audioRef.current = new Audio();
@@ -42,7 +43,7 @@ export const AudioProvider = ({ children }: { children: ReactNode }) => {
         a.currentTime = PREVIEW_LIMIT_SECONDS;
         setCurrentTime(PREVIEW_LIMIT_SECONDS);
         setIsPlaying(false);
-        setLimitReached(true);
+        if (!dismissedRef.current) setLimitReached(true);
       } else {
         setCurrentTime(a.currentTime);
       }
@@ -71,6 +72,7 @@ export const AudioProvider = ({ children }: { children: ReactNode }) => {
       a.currentTime = 0;
       setCurrentTime(0);
     }
+    dismissedRef.current = false;
     setLimitReached(false);
     a.play().then(() => setIsPlaying(true)).catch(() => setIsPlaying(false));
   }, [current]);
@@ -104,7 +106,10 @@ export const AudioProvider = ({ children }: { children: ReactNode }) => {
     if (target < PREVIEW_LIMIT_SECONDS) setLimitReached(false);
   }, []);
 
-  const dismissLimit = useCallback(() => setLimitReached(false), []);
+  const dismissLimit = useCallback(() => {
+    dismissedRef.current = true;
+    setLimitReached(false);
+  }, []);
 
   const duration = Math.min(rawDuration || PREVIEW_LIMIT_SECONDS, PREVIEW_LIMIT_SECONDS);
   const progress = duration ? Math.min(currentTime, duration) / duration : 0;
